@@ -1,0 +1,289 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h3 {
+    font-family: $font-georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    margin: 0;
+}
+
+h5 {
+    font-family: $font-georgia;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: $color-dark-l;
+    margin: 0;
+}
+
+.button-color {
+    height: 52px;
+    border-radius: 100px;
+    font-family: $font-georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    transition: background-color .3s;
+    cursor: pointer;
+
+    &:disabled {
+        border-color: $color-dark-s;
+        color: $color-dark-s;
+        cursor: default;
+    }
+
+    &-primary {
+        border: solid $color-primary;
+        background-color: $color-primary;
+
+        &:not(.counter):hover {
+            background-color: $color-primary-light;
+            border: solid $color-primary-light;
+        }
+    }
+
+    &-opacity {
+        border: solid $color-primary;
+        background-color: rgba(255, 255, 255, 0);
+
+        &:not(:disabled):hover {
+            background-color: $color-primary-light;
+            border: solid $color-primary-light;
+
+        }
+    }
+}
+
+.arrow-button {
+    width: 52px;
+    min-width: 52px;
+    border-radius: 100%;
+    margin: 0;
+    padding: 0;
+
+    &-right {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $color-light-s;
+    height: 435px;
+    width: 270px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        background-color: #fff;
+
+        .button-card {
+            background-color: $color-primary-light;
+            border: solid $color-primary-light;
+        }
+    }
+
+    &-text {
+        margin-bottom: 30px;
+        margin-top: 0;
+        font-family: $font-georgia;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $color-dark-l;
+
+        img {
+            margin-bottom: 25px;
+            border-radius: 10px 10px 0 0;
+
+        }
+    }
+
+    button {
+        width: 187px;
+    }
+}
+
+.modal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    position: fixed;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    &-wrapper {
+        position: absolute;
+        width: 900px;
+        height: 500px;
+        top: 50%;   
+        left: 50%;
+        padding-bottom: 5px;
+        transform: translate(-50%, -50%);
+        border-radius: 9px;
+        background-color: #fff;
+        display: flex;
+
+        @include for-tablet {
+            width: 630px;
+            height: 350px;
+        }
+
+        @include for-mobile {
+            width: 240px;    
+            height: auto;        
+            // max-height: 370px;
+        }
+
+        .arrow-button {
+            position: absolute;
+            right: -40px;
+            top: -50px;
+
+            // background-color: #F6F6F6;
+            @include for-mobile {
+                right: -29px;
+                top: -53px;
+            }
+
+            &:hover {
+                background-color: $color-primary-light;
+            }
+        }
+
+        &-pet {
+            border-radius: 9px 0 0 9px;
+
+            @include for-tablet {
+                width: 350px;
+                height: 350px;
+            }
+
+            @include for-mobile {
+                display: none;
+            }
+        }
+
+        &-text {
+            padding: 53px 20px 5px 31px;
+
+            @include for-tablet {
+                padding: 6px 5px 5px 7px;
+            }
+
+            @include for-mobile {
+                padding: 11px 5px 5px 10px;
+            }
+
+            h3 {
+                @include for-mobile {
+                    text-align: center;
+                }
+            }
+
+            .subtitle {
+                margin: 10px auto 40px;
+                font-family: Georgia;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: 0.06em;
+                text-align: left;
+
+                @include for-tablet {
+                    margin-bottom: 22px;
+                }
+
+                @include for-mobile {
+                    text-align: center;
+                    margin: 3px 0;
+                }
+            }
+
+            .text {
+                font-family: Georgia;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0.06em;
+                text-align: left;
+
+                @include for-tablet {
+                    font-family: Georgia;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    letter-spacing: 0.06em;
+                    text-align: left;
+                }
+            }
+
+            .list {
+                margin-top: 40px;
+                list-style: outside;
+                color: $color-primary;
+                padding-left: 15px;
+
+                @include for-tablet {
+                    margin-top: 18px;
+                }
+
+                li {
+                    margin-bottom: 10px;
+
+                    @include for-tablet {
+                        margin: 0 0 5px;
+                    }
+
+                    @include for-mobile {
+                        margin: 0 0 6px;
+                    }
+                }
+
+                span {
+                    color: #000;
+                }
+
+            }
+        }
+    }
+
+}

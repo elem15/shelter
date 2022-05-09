@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0;
+}
+
+h5 {
+  font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #545454;
+  margin: 0;
+}
+
+.button-color {
+  height: 52px;
+  border-radius: 100px;
+  font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.button-color:disabled {
+  border-color: #CDCDCD;
+  color: #CDCDCD;
+  cursor: default;
+}
+.button-color-primary {
+  border: solid #F1CDB3;
+  background-color: #F1CDB3;
+}
+.button-color-primary:not(.counter):hover {
+  background-color: #FDDCC4;
+  border: solid #FDDCC4;
+}
+.button-color-opacity {
+  border: solid #F1CDB3;
+  background-color: rgba(255, 255, 255, 0);
+}
+.button-color-opacity:not(:disabled):hover {
+  background-color: #FDDCC4;
+  border: solid #FDDCC4;
+}
+
+.arrow-button {
+  width: 52px;
+  min-width: 52px;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}
+.arrow-button-right img {
+  transform: rotate(180deg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #FAFAFA;
+  height: 435px;
+  width: 270px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.card:hover {
+  background-color: #fff;
+}
+.card:hover .button-card {
+  background-color: #FDDCC4;
+  border: solid #FDDCC4;
+}
+.card-text {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.card-text img {
+  margin-bottom: 25px;
+  border-radius: 10px 10px 0 0;
+}
+.card button {
+  width: 187px;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+  position: fixed;
+}
+.modal.hidden {
+  visibility: hidden;
+}
+.modal-wrapper {
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  padding-bottom: 5px;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  background-color: #fff;
+  display: flex;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper {
+    width: 630px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper {
+    width: 240px;
+    height: auto;
+  }
+}
+.modal-wrapper .arrow-button {
+  position: absolute;
+  right: -40px;
+  top: -50px;
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper .arrow-button {
+    right: -29px;
+    top: -53px;
+  }
+}
+.modal-wrapper .arrow-button:hover {
+  background-color: #FDDCC4;
+}
+.modal-wrapper-pet {
+  border-radius: 9px 0 0 9px;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper-pet {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper-pet {
+    display: none;
+  }
+}
+.modal-wrapper-text {
+  padding: 53px 20px 5px 31px;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper-text {
+    padding: 6px 5px 5px 7px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper-text {
+    padding: 11px 5px 5px 10px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper-text h3 {
+    text-align: center;
+  }
+}
+.modal-wrapper-text .subtitle {
+  margin: 10px auto 40px;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper-text .subtitle {
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper-text .subtitle {
+    text-align: center;
+    margin: 3px 0;
+  }
+}
+.modal-wrapper-text .text {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper-text .text {
+    font-family: Georgia;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.06em;
+    text-align: left;
+  }
+}
+.modal-wrapper-text .list {
+  margin-top: 40px;
+  list-style: outside;
+  color: #F1CDB3;
+  padding-left: 15px;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper-text .list {
+    margin-top: 18px;
+  }
+}
+.modal-wrapper-text .list li {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1279.5px) {
+  .modal-wrapper-text .list li {
+    margin: 0 0 5px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .modal-wrapper-text .list li {
+    margin: 0 0 6px;
+  }
+}
+.modal-wrapper-text .list span {
+  color: #000;
+}
+
+/*# sourceMappingURL=common.css.map */

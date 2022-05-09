@@ -1,0 +1,632 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/common.scss';
+@import '../../assets/styles/mixins.scss';
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include for-tablet {
+        width: 768px;
+    }
+
+    @include for-mobile {
+        width: auto;
+        max-width: 767px;
+        min-width: 320px;
+    }
+
+}
+
+.start-screen {
+    height: 908px;
+    padding-top: 60px;
+    background: $radial-gradient;
+    overflow: hidden;
+    @import '../../assets/styles/header.scss';
+
+    @include for-tablet {
+        height: 1165px;
+        padding: 30px 30px 0;
+    }
+
+    @include for-mobile {
+        height: 825px;
+        padding: 30px 10px 0;
+        z-index: 100;
+        position: relative;
+        overflow: visible;
+    }
+}
+
+.start-screen-content {
+    display: flex;
+    margin: 45px 40px 0px 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include for-tablet {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    @include for-mobile {
+        margin: 0;
+        height: 739px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content {
+        margin: 142px 5px 40px 1px;
+
+        @include for-tablet {
+            margin: 24px 0 24px 83px;
+        }
+
+        @include for-mobile {
+            margin: 61px 0 0;
+            height: 296px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 42px;
+        }
+
+        &-title {
+            @include h3-desktop;
+            margin-bottom: 42px;
+            margin-right: 80px;
+
+            @include for-tablet {
+                margin-right: 145px;
+
+            }
+
+            @include for-mobile {
+                @include h3-mobile;
+                margin: 0;
+                padding: 0 30px;
+            }
+        }
+
+        &-body {
+            font-family: $font-arial;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $color-dark-s;
+            margin-bottom: 42px;
+            padding-right: 15px;
+            margin-right: 0;
+
+            @include for-tablet {
+                margin-right: 61px;
+            }
+
+            @include for-mobile {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+        }
+
+        &-button {
+            width: 207px;
+            left: 70px;
+            top: 391px;
+            margin-left: 0;
+
+            @include for-tablet {
+                margin: 0 23%;
+            }
+
+            @include for-mobile {
+                display: block;
+                top: 0;
+                left: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .start-dog {
+        margin: 15px 0 0 7px;
+
+        @include for-tablet {
+            margin: 77px auto 0 101px;
+        }
+
+        @include for-mobile {
+            margin: 0;
+        }
+
+        img {
+            @include for-tablet {
+                width: 569px;
+                height: 593px;
+            }
+
+            @include for-mobile {
+                width: 260px;
+                height: 272px;
+                margin: 0 0 0 41px;
+            }
+
+        }
+    }
+}
+
+.about {
+    height: 588px;
+    background-color: #fff;
+    padding: $padding-container;
+
+    @include for-tablet {
+        height: 1048px;
+        padding-top: 68px;
+    }
+
+    @include for-mobile {
+        height: auto;
+        // height: 974px;
+        padding: 41px 0 39px;
+    }
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-tablet {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+
+    }
+
+    &-image {
+        margin: 0 120px 0 175px;
+
+        @include for-tablet {
+            margin: 62px auto 0;
+        }
+
+        @include for-mobile {
+            margin-top: 25px;
+
+            img {
+                width: 260px;
+                height: 353px;
+            }
+        }
+    }
+
+    &-article {
+        flex: 0 1 50%;
+        padding-right: 175px;
+
+        @include for-tablet {
+            padding: 0 19%;
+        }
+
+        @include for-mobile {
+            margin: 0;
+            padding: 0 7%;
+        }
+
+        &-heading {
+            text-align: left;
+            margin: 13px 0 24px;
+
+            @include for-mobile {
+                @include h3-mobile;
+                margin: 0;
+            }
+        }
+
+        &-body {
+            font-family: $font-arial;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: #4C4C4C;
+            margin-top: 25px;
+
+            @include for-mobile {
+                margin-top: 24px;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+.pets {
+    padding: $padding-container;
+    height: 877px;
+    background-color: #F6F6F6;
+
+    @include for-tablet {
+        padding: 81px 30px 0;
+    }
+
+    @include for-mobile {
+        padding: 42px 10px;
+        height: auto;
+    }
+
+    &-content {
+
+        &-heading {
+            text-align: center;
+            margin: 0 0 60px;
+
+            @include for-mobile {
+                @include h3-mobile;
+                margin: 0 0 44px;
+            }
+        }
+
+        &-slider {
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 0px;
+
+            @include for-tablet {
+                // width: 700px;
+            }
+
+            @include for-mobile {
+                // flex-direction: row-reverse;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                gap: 17px 28px;
+                max-width: 320px;
+                margin: 40px auto 0;
+
+            }
+
+            @include for-mobile {
+                .arrow-button-left {
+                    order: 2;
+                }
+
+                .arrow-button-right {
+                    order: 3;
+                }
+            }
+            &-wrapper {
+                width: 1000px;
+                height: 435px;
+                overflow: hidden;
+                position: relative;
+                @include for-tablet {
+                    width: 623px;
+                }
+            }
+
+            &-body {
+                position: absolute;
+                left: -1077px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 90px;
+                animation-duration: 1.5s;
+                animation-timing-function: ease-in-out;
+                @include for-tablet {
+                    left: -1222px;
+                    column-gap: 39px;
+                }
+                
+                &.transition-right {
+                    animation-name: move-right;
+                    @include for-tablet {
+                        animation-name: move-right-tablet;
+                    }
+                    @include for-mobile {
+                        animation-name: move-right-mobile;
+                    }
+                }
+
+                @keyframes move-right{
+                    from {left: -1077px;}
+                    to {left: 2px}
+                }
+                @keyframes move-right-tablet {
+                    from{left: -1222px;}
+                    to{left: -605px;}
+                }
+                @keyframes move-right-mobile {
+                    from{left: -1222px;}
+                    to{left: -914px;}
+                }
+
+                &.transition-left {
+                    animation-name: move-left;
+                    @include for-tablet {
+                        animation-name: move-left-tablet;
+                    }
+                    @include for-mobile {
+                        animation-name: move-left-mobile;
+                    }
+                }
+
+                @keyframes move-left {
+                    from {left: -1077px;}
+                    to {left: -2157px;}
+                }
+                @keyframes move-left-tablet {
+                    from {left: -1222px;}
+                    to {left: -1840px;}
+                }
+                @keyframes move-left-mobile {
+                    from {left: -1222px;}
+                    to {left: -1530px;}
+                }
+
+                @include for-tablet {
+                    margin: 0 auto;
+                    overflow: hidden;
+
+                    .card {
+                        position: relative;
+                    }
+                }
+
+                @include for-mobile {
+                    order: 1;
+                    margin: 0 5%;
+                }
+            }
+        }
+
+        &-button {
+            display: block;
+            width: 261px;
+            text-align: center;
+            margin: 0 auto;
+
+            @include for-mobile {
+                margin-top: 41px;
+            }
+        }
+    }
+}
+
+.help {
+    height: 611px;
+    padding: $padding-container;
+
+    @include for-tablet {
+        height: 779px;
+        padding: 80px 0 100px 0;
+    }
+
+    @include for-mobile {
+        width: 100%;
+        height: auto;
+        padding: 43px 0;
+    }
+
+    &-content {
+        @include for-tablet {
+            width: 630px;
+            margin: 0 auto;
+        }
+
+        @include for-mobile {
+            width: auto;
+            min-width: 300px;
+        }
+
+        &-heading {
+            text-align: center;
+            margin-bottom: 60px;
+
+            @include for-tablet {
+                margin-bottom: 61px;
+            }
+
+            @include for-mobile {
+                @include h3-mobile;
+                margin-bottom: 25px;
+            }
+        }
+
+        &-list {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 24px 120px;
+            padding: 0;
+            margin: 0 0 55px;
+
+            @include for-tablet {
+                display: grid;
+                grid-template-rows: repeat(3, 143px);
+                grid-template-columns: repeat(3, 109px);
+                justify-content: center;
+                align-content: center;
+                padding: 0;
+                margin: 0;
+            }
+
+            @include for-mobile {
+                grid-template-columns: repeat(2, 42%);
+                grid-template-rows: repeat(5, 119px);
+                gap: 0 24px;
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                img {
+                    display: block;
+                    margin-bottom: 30px;
+                    text-align: center;
+
+                    @include for-mobile {
+                        margin-bottom: 18px;
+                        width: 50px;
+                    }
+                }
+
+                .card-text {
+                    text-align: center;
+
+                    @include for-mobile {
+                        margin-bottom: 0;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            &-row-2 {
+                width: 860px;
+            }
+        }
+    }
+}
+
+.donation {
+    height: 462px;
+    background-color: #F6F6F6;
+
+    @include for-tablet {
+        height: 783px;
+    }
+
+    @include for-mobile {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    &-content {
+        height: 77%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include for-tablet {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        @include for-mobile {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+
+        &-image {
+            margin: 90px 27px 0 185px;
+
+            @include for-tablet {
+                margin: 50px 27px 0 22px;
+            }
+            @include for-mobile {
+                margin: 25px 27px 35px 22px;
+                img {
+                    width: 260px;
+                    height: 135px;
+                }
+            }
+        }
+
+        &-article {
+            margin: 83px 0;
+
+            @include for-tablet {
+                margin: 81px 27px 0 193px;
+            }
+            @include for-mobile {
+                margin: 0;
+            }
+
+
+            &-heading {
+                margin-bottom: 18px;
+
+                @include for-mobile {
+                    margin: 20px 0 23px;
+                    @include h3-mobile;
+                }
+            }
+
+            &-bank {
+                margin-bottom: 20px;
+                @include for-mobile {
+                    // margin-top: 22px;
+                    text-align: center;
+                    letter-spacing: 0;
+                }
+            }
+
+
+            button {
+                height: 43px;
+                width: 349px;
+                border-radius: 9px;
+                padding: 0 0 3px 0;
+                font-size: 20px;
+                margin-bottom: 8px;
+                padding: 0 0 4px 4px;
+                @include for-mobile {
+                    display: block;
+                    margin: 22px auto 8px;
+                    font-size: 15px;
+                    width: 281px;
+                    text-align: center;
+                }
+
+                img {
+                    position: relative;
+                    left: -4px;
+                    bottom: -4px;
+                    margin-right: 5px;
+                }
+            }
+
+            &-body {
+                font-family: $font-arial;
+                font-size: 12px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0px;
+                text-align: left;
+                color: #B2B2B2;
+                padding-right: 180px;
+                @include for-mobile {
+                    padding: 0;
+                    margin: 20px 20px;
+                    text-align: justify;
+                }
+            }
+
+        }
+    }
+}
+
+@import '../../assets/styles/footer.scss';
+
+
+@import '../../assets/styles/fonts.scss';

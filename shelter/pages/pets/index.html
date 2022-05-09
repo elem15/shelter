@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" sizes="64x64" href="../../assets/icons/hp_dog.ico">
+    <link rel="stylesheet" href="../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script async src="./loadData.js"></script>
+    <title>Cozy Pets</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="header-container">
+            <header class="header">
+                <div class="shadow"></div>                
+                <div class="title">
+                    <h1 class="main-title"><a href="../main/index.html" id="title">Cozy House</a></h1>
+                    <h4 class="subtitle">Shelter for pets in Boston</h4>
+                </div>
+                <nav class="nav-menu">
+                    <div class="burger">
+                        <div class="burger-wrapper" >
+                            <div class="burger-button__line"></div>
+                            <div class="burger-button__line"></div>
+                            <div class="burger-button__line"></div>
+                        </div>
+                    </div>
+                    <ul class="nav-menu__list visibility">
+                        <li class="selected footer-link"><a href='#footer' id="footer-link">Contacts</a></li>
+                        <li class="selected footer-link"><a href='../main/index.html#help' id="help-link">Help the shelter</a></li>
+                        <li class="active selected footer-link"><a href='#' id="pets-link">Our pets</a></li>
+                        <li class="selected" ><a href='../main/index.html' id="about-link">About the shelter</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </section>
+        <section class="pets" id="pets">
+            <div class="pets-content">
+                <h3 class="pets-content-heading">
+                    Our friends who<br>are looking for a house
+                </h3>
+                <div class="pets-content-bigslider">
+                    <div class="pets-content-bigslider-body">
+ 
+                    </div>
+                    <div class="pets-content-bigslider-pagin">
+                        <button disabled class="arrow-button button-color button-color-opacity" data-begin><<</button>
+                        <button disabled class="arrow-button button-color button-color-opacity" data-left><</button>
+                        <button class="arrow-button button-color button-color-primary counter" data-counter>1</button>
+                        <button class="arrow-button button-color button-color-opacity" data-right>></button>
+                        <button class="arrow-button button-color button-color-opacity" data-end>>></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="footer">
+            <div class="footer-contacts">
+                <h3 class="footer-contacts-heading">
+                    For questions and suggestions
+                </h3>
+                <div class="footer-contacts-element">
+                    <a href = "mailto: email@shelter.com"><img src="../../assets/icons/icon-email.svg" alt="email"></a>
+                    <a href = "mailto: email@shelter.com" class="card-text">email@shelter.com</a>
+                </div>
+                <div class="footer-contacts-element">
+                    <a href="tel:+136745677554"><img src="../../assets/icons/icon-phone.svg" alt="telephone"></a>
+                    <a href="tel:+136745677554" class="card-text">+13 674 567 75 54</a>
+                </div>
+            </div>
+            <div class="footer-location">
+                <h3 class="footer-location-heading">
+                    We are waiting for your visit
+                </h3>
+                <div class="footer-location-element">
+                    <a href="https://www.google.com/maps/search/?api=1&query=42.35872629489053, -71.0547423955892" target="_blank"><img src="../../assets/icons/icon-marker.png" alt="address"></a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=42.35872629489053, -71.0547423955892" target="_blank" class="card-text">1 Central Street, Boston<br>(entrance from the store)</a>
+                </div>
+                <div class="footer-location-element">
+                    <a href="https://www.google.com/maps/search/?api=1&query=51.42039559961656,-0.2001691734162396" target="_blank"><img src="../../assets/icons/icon-marker.png" alt="address"></a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=51.42039559961656,-0.2001691734162396" target="_blank" class="card-text">18 South Park, London</a>
+                </div>
+            </div>
+            <div class="footer-image">                
+                <img src="../../assets/images/footer-puppy.png" alt="footer-puppy">
+            </div>
+        </footer>
+        <div class="modal hidden">
+            <div class="modal-wrapper">
+
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/scripts/burger.js"></script>
+    <script src="../../assets/scripts/modal.js"></script>
+    <script defer src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "ARIAL";
+  src: url("../../assets/fonts/ARIAL.TTF") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GEORGIA";
+  src: url("../../assets/fonts/georgia.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,272 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/common.scss';
+@import '../../assets/styles/header.scss';
+@import '../../assets/styles/footer.scss';
+
+
+.container {
+    width: 1280px;
+    margin: 120px auto 0;
+
+    @include for-tablet {
+        width: 768px;
+    }
+
+    @include for-mobile {
+        width: auto;
+        max-width: 767px;
+        min-width: 320px;
+    }
+}
+.header-container {
+    height: 120px;
+    padding: 30px 40px;
+    background-color: rgba($color: #fff, $alpha: .5);
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    
+    @include for-tablet {
+        padding: 30px 40px 30px 28px;
+    }
+    
+    @include for-mobile {
+        margin: 0;
+        padding: 30px 30px 30px 10px;
+        left: 0;
+        right: 0;
+        
+        .nav-menu__list {
+            right: -30px;
+            &.visibility {
+
+                right: -350px;
+            }
+                }
+        .burger {
+            margin-right: 23px;
+        }
+
+        
+        .header {
+
+            &.over-burger {
+                .title {
+                    .main-title a {
+                        color: $color-primary;
+                    }
+
+                    .subtitle {
+                        color: #fff;
+                    }
+                }
+
+                .nav-menu .burger-wrapper .burger-button__line {
+                    background-color: $color-primary;
+                }
+            }
+
+            .title {
+                .main-title a {
+                    color: $color-dark-l;
+                }
+
+                .subtitle {
+                    color: $color-dark-3xl;
+                }
+            }
+
+            .nav-menu .burger-wrapper {
+                margin-right: 0;
+
+                .burger-button__line {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+
+.header {
+    .title {
+        .main-title {
+            a {
+                color: $color-dark-l;
+                transition: all .3s;
+
+                &:hover {
+                    color: $color-dark-3xl;
+                }
+            }
+        }
+
+        .subtitle {
+            color: $color-dark-l;
+        }
+    }
+
+    .nav-menu {
+        &__list {
+            li {
+                a {
+                    color: $color-dark-l;
+
+                }
+
+                &.selected {
+                    &:hover a {
+                        color: $color-dark-3xl;
+                    }
+
+                    &.active {
+                        cursor: pointer;
+                        a {
+                            color: $color-dark-l;
+                            // cursor: default;
+
+                            :hover {
+                                color: $color-dark-l;
+
+                            }
+                        }
+                    }
+                }
+
+                @include for-mobile {
+                    a {
+                        color: $color-dark-s;
+
+                    }
+
+                    &.selected {
+
+                        &:hover a {
+                            color: $color-light-s;
+                        }
+
+                        &.active {
+
+                            a {
+                                color: $color-light-s;
+                                // cursor: default;
+
+                                :hover {
+                                    color: $color-dark-s;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.pets {
+    height: 1342px;
+    padding: 80px 40px;
+    background-color: $color-light-l;
+
+    @include for-tablet {
+        padding: 80px 10%;
+        height: 1733px;
+        width: 768px;
+    }
+
+    @include for-mobile {
+        padding: 43px 0 43px 0px;
+        width: auto;
+        height: auto;
+        min-width: 320px;
+        max-width: 767px;
+    }
+
+    &-content {
+        @include for-mobile {
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        &-heading {
+            text-align: center;
+            margin-bottom: 60px;
+
+            @include for-tablet {
+                margin-bottom: 31px;
+            }
+
+            @include for-mobile {
+                @include h3-mobile;
+                margin-bottom: 40px;
+
+            }
+        }
+
+        &-bigslider {
+            @include for-tablet {
+                padding: 0 3%;
+            }
+
+            @include for-mobile {
+                width: 300px;
+                padding: 0;
+            }
+
+            &-body {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                padding-left: 0;
+                @include for-tablet {
+                    height: 1374px;
+                    overflow: hidden;
+                }
+
+                @include for-mobile {
+                    padding-left: 20px;
+                    margin-bottom: 35px;
+                }
+
+                .card {
+                    margin-bottom: 30px;
+                    transition: all .5s;
+
+                }
+            }
+
+            &-pagin {
+                display: flex;
+                justify-content: center;
+                column-gap: 20px;
+
+                @include for-mobile {
+                    column-gap: 10px;
+                    margin: 0 0 0 10px;
+                }
+
+                .arrow-button {
+                    font-style: $font-georgia;
+
+                    &.counter {
+                        cursor: default;
+                    }
+
+                    &:disabled {
+                        border-color: $color-dark-s;
+                        color: $color-dark-s;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import '../../assets/styles/fonts.scss';

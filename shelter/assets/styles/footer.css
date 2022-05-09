@@ -1,0 +1,197 @@
+.footer {
+  height: 350px;
+  padding: 60px 40px 0;
+  background: linear-gradient(to right, #544135, #262425 75%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 50px;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer {
+    height: 639px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 31px 40px 0 62px;
+    column-gap: 52px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer {
+    height: auto;
+    padding: 29px 10px 0;
+    justify-content: center;
+    align-items: stretch;
+    column-gap: 50px;
+    row-gap: 40px;
+  }
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 35px;
+  flex: 0 1 35%;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-contacts {
+    flex: 0 1 43%;
+    row-gap: 37px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-contacts {
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer-contacts-heading {
+  color: #fff;
+  margin-right: 95px;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-contacts-heading {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-contacts-heading {
+    font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+}
+.footer-contacts-element {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-contacts-element {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-contacts-element {
+    align-items: center;
+  }
+}
+.footer-contacts-element img {
+  margin-right: 18px;
+}
+.footer-contacts-element .card-text {
+  color: #F1CDB3;
+  margin: 0;
+}
+.footer-contacts-element .card-text:hover {
+  color: #FDDCC4;
+}
+.footer-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 32px;
+  align-items: baseline;
+  flex: 0 1 37%;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-location {
+    flex: 0 1 47%;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-location {
+    flex: 0 1 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 34px;
+  }
+}
+.footer-location-heading {
+  color: #fff;
+  margin-right: 105px;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-location-heading {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-location-heading {
+    font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0 10% 7px;
+  }
+}
+.footer-location-element {
+  display: flex;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-location-element {
+    align-items: center;
+  }
+  .footer-location-element img {
+    margin-right: 22px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-location-element {
+    justify-content: start;
+  }
+  .footer-location-element:last-child {
+    margin-right: 32px;
+  }
+}
+.footer-location-element img {
+  margin-right: 18px;
+}
+.footer-location-element .card-text {
+  color: #F1CDB3;
+  margin-bottom: 0;
+  text-align: left;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-location-element .card-text {
+    margin: 0;
+  }
+}
+.footer-location-element .card-text:hover {
+  color: #FDDCC4;
+}
+.footer-image {
+  position: relative;
+  top: -22px;
+}
+@media screen and (max-width: 1279.5px) {
+  .footer-image {
+    flex: 0 1 100%;
+    top: 27px;
+    right: 10px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .footer-image {
+    top: 0px;
+    left: 0;
+  }
+  .footer-image img {
+    position: relative;
+    z-index: 0;
+    width: 260px;
+    height: 269px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

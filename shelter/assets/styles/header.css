@@ -1,0 +1,201 @@
+.header-container .header .nav-menu .burger-wrapper.active .burger-button__line {
+  background-color: #F1CDB3;
+}
+
+.header-container {
+  z-index: 100;
+}
+
+.shadow {
+  display: none;
+}
+@media screen and (max-width: 767.5px) {
+  .shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    opacity: 0;
+    transition: all 1s;
+    z-index: 1;
+  }
+  .shadow.hidden {
+    opacity: 0.6;
+    display: block;
+  }
+}
+
+.header {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1279.5px) {
+  .header {
+    height: 60px;
+    width: 708px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .header {
+    width: auto;
+    z-index: 200;
+  }
+}
+.header .title {
+  height: 60px;
+  display: block;
+  text-align: center;
+  z-index: 200;
+  transition: all 0.9s;
+}
+.header .title .main-title {
+  margin: 0 0 7px 2px;
+}
+.header .title .main-title a {
+  color: #F1CDB3;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  font-family: GEORGIA, Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1.7px;
+  transition: all 0.3s;
+}
+.header .title .main-title a:hover {
+  color: #FDDCC4;
+}
+.header .title .subtitle {
+  color: #fff;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 400;
+  font-family: ARIAL, Arial, Helvetica, sans-serif;
+  letter-spacing: 1.3px;
+  margin: 9px 0 0 5px;
+}
+.header .nav-menu {
+  width: 40.2%;
+  position: relative;
+  z-index: 100;
+}
+@media screen and (max-width: 1279.5px) {
+  .header .nav-menu {
+    width: 68%;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu {
+    width: auto;
+  }
+}
+.header .nav-menu .burger {
+  display: none;
+  position: relative;
+  z-index: 300;
+  margin-top: 7px;
+}
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu .burger {
+    display: flex;
+    justify-content: end;
+  }
+  .header .nav-menu .burger-wrapper {
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.9s;
+    margin-right: 45px;
+  }
+  .header .nav-menu .burger-wrapper:hover .burger-button__line {
+    background-color: #FDDCC4;
+  }
+  .header .nav-menu .burger-wrapper.active {
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+  .header .nav-menu .burger-button__line {
+    background-color: #F1CDB3;
+    position: relative;
+    width: 30px;
+    min-width: 30px;
+    display: block;
+    margin: 10px auto;
+    height: 2px;
+  }
+}
+.header .nav-menu__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  transition: all 0.9s;
+}
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu__list {
+    position: absolute;
+    right: -10px;
+    top: -60px;
+    background-color: #292929;
+    height: 100vh;
+    width: 320px;
+    padding: 248px 38px;
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    row-gap: 7vh;
+    align-items: center;
+    transition: all 0.9s;
+    z-index: 100;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu__list.visibility {
+    right: -330px;
+    transition: right 0.9s;
+  }
+}
+.header .nav-menu__list li {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: ARIAL, Arial, Helvetica, sans-serif;
+  transition: color 0.9s;
+}
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu__list li {
+    font-family: ARIAL, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+.header .nav-menu__list li a {
+  color: #CDCDCD;
+}
+.header .nav-menu__list li.selected::after {
+  content: "";
+  display: block;
+  width: 0%;
+  margin: 0 auto;
+  height: 3px;
+  background: #F1CDB3;
+  transition: width 0.3s ease-out;
+}
+.header .nav-menu__list li.selected.active::after {
+  width: 100%;
+}
+.header .nav-menu__list li.selected:hover::after {
+  width: 100%;
+}
+.header .nav-menu__list li.selected:hover a {
+  color: #FAFAFA;
+}
+.header .nav-menu__list .active a {
+  color: #FAFAFA;
+}
+
+/*# sourceMappingURL=header.css.map */
